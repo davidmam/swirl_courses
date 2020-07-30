@@ -9,19 +9,60 @@
 - Class: text
   Output: "This tutorial will take you through setting up and using RStudio Projects. When you see the elipsis (...) press the [ENTER] key to continue"
 
-- Class: text
-  Output: "In any investigation you will collect data, process it, derive results and produce outputs. Projects are a convenient way of managing your data and analysis"
-  
-- Class: text
-  Output: "Just as there is a recommended way to keep your lab journal, a Project should be kept in a consistent and logical form"
-  
-- Class: text
-  Output: "A Project is a folder, with subfolders, containing a <Project name>.Rproj file. (<Project name> is the name of your project)"
+- Class: text_question
+  Output: "You should have created a project myProject and be working in that. Type Y if this is the case"
+  CorrectAnswer: 'Y'
+  AnswerTests: file_exists('myProject.Rproj')
+  Hint: "Make sure you have created and opened the project 'myProject'"
 
 - Class: text
-  Output: "When you create a new project or open a .Rproj project file, RStudio will restart in that project directory with all the environment and history from that previous session. "
-  
+  Output: This is an empty project. It will keep track of all the commands you write, all the variables you create and so on.
+However, a single place to put everything can easily get disorganised. We will create some folders to organise our data and our analysis.
+
+
+- Class: text_question
+  Output: Create a folder (subdirectory) in your main project directory and call it 'data' (without the quotes). You can use any appropriate method to do this, such as using the file browser. Type Y when done.
+  CorrectAnswer: Y
+  AnswerTests: folder_exists('data')
+  Hint: I can't find that folder. Check it is in your myProject folder and is exactly 'data' (not 'Data')
+
+- Class: text
+  Output: This is where we will save our raw data. We will treat our raw data as read only 
+so we can always repeat our analysis.
+
+- Class: text_question
+  Output: We also need to crete a folder to hold our pocessed data. These would be cleaned data files, intermediate results and so on. Create a folder 'processed_data' and enter 'Y' when done
+  CorrectAnswer: Y
+  AnswerTests: folder_exists('processed_data')
+  Hint: I can't find that folder. Ensure that it is named correctly and in the project folder .
+
+- Class: text
+  Output: There is one more essential folder which is where we will keep the code we use to perform our analysis.
+This will be in the form of R scripts (filename.R) or R notebooks (filename.Rmd) that keep a record of the commands we use and allow the analysis to be repeated.
+
+
+- Class: text_question
+  Output: Create a folder 'analysis' in the project directory and enter 'Y' when done.
+  CorrectAnswer: Y
+  AnswerTests: folder_exists('analysis')
+  Hint: I can't find the 'analysis' folder. Ensure the name is spelled correctly and it is in the Project folder.
+
+
+- Class: text
+  Output: You may want to add more folders depending on your project.
+You may want ‘reports' for output, which may have subfolders for each figure if required, 'documents' which would have papers etc. relevant to the project and so on
+
 - Class: video
-  Output: "To create a new project, select the project menu at the top right of the RStudio window. A video walk through is available. Would you like to watch that now?"
+  Output: As your project gets more complex you may need to structure your data folder and other folders. Would you like to view some guidelines on organising your data now?
+  VideoLink: http://address.of.video
 
-  
+- Class: text
+  Output: You should now have a well organised project. It is time to copy some data files into your data folder and get cracking.
+
+
+- Class: text
+  Output: When you close a project it will save all the commands you have used to the file .Rhistory and all the variables to the file .RData. 
+
+
+- Class: text
+  Output: When you open the project (by changing to it with the project seelctor on the top right of the window or by double clicking on the projectname.Rproj file) RStudio will reload your history and data so you will be back exactly where you left off, with your current working directory set to the project folder.
