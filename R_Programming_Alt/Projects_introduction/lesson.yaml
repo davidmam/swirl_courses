@@ -22,6 +22,9 @@
   Output: "When you create a new project or open a .Rproj project file, RStudio will restart in that project directory with all the environment and history from that previous session. "
   
 - Class: video
-  Output: "To create a new project, select the project menu at the top right of the RStudio window. A video walk through is available. Would you like to watch that now?"
-
+  Output: "A video walk through for creating projects is available. Would you like to watch that now?"
+  VideoLink: //todo
+  
+- Class: text
+  Output: "Create a new project called myProject. This session will close. Resume with lesson 'Projects and Data Management'"
   
