@@ -66,3 +66,8 @@ You may want ‘reports' for output, which may have subfolders for each figure if 
 
 - Class: text
   Output: When you open the project (by changing to it with the project seelctor on the top right of the window or by double clicking on the projectname.Rproj file) RStudio will reload your history and data so you will be back exactly where you left off, with your current working directory set to the project folder.
+
+
+- Class: text
+  Output: That is the basics of structuring your project. For more advanced use, follow the 'Version Control with Git' lesson.
+
